@@ -1,1 +1,1 @@
-a demo for practise using guns.
+a demo for practice using guns.
