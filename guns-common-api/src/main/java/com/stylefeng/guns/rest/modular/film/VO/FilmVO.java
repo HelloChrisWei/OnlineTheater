@@ -13,9 +13,7 @@ import java.util.List;
 public class FilmVO {
 
     private int filmNum;
-    // 分页
-    private int nowPage;
-    private int totalPage;
+
     private List<FilmInfo> filmInfo;
 
 

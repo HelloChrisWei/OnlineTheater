@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/film")
 public class FilmController {
 
+    private static final String img_pre = "http://img.meetingshop.cn/";
+
     @Reference(interfaceClass = FilmServiceApi.class, check = false)
     private FilmServiceApi filmServiceApi;
 
@@ -29,9 +31,9 @@ public class FilmController {
         // 获取banner信息
         filmIndexVO.setBanners(filmServiceApi.getBanners());
         // 获取正在热映的电影
-        filmIndexVO.setHotFilms(filmServiceApi.getHotFilms(true, 4, 1, 1, 99, 99, 99));
+        filmIndexVO.setHotFilms(filmServiceApi.getHotFilms());
         // 即将上映的电影
-        filmIndexVO.setSoonFilms(filmServiceApi.getSoonFilms(true, 4, 1, 1, 99, 99, 99));
+        filmIndexVO.setSoonFilms(filmServiceApi.getSoonFilms());
         // 票房排行榜
         filmIndexVO.setBoxRanking(filmServiceApi.getBoxRanking());
         // 获取受欢迎的榜单
@@ -39,7 +41,7 @@ public class FilmController {
         // 获取前一百
         filmIndexVO.setTop100(filmServiceApi.getTop());
 
-        return ResponseVO.success(filmIndexVO);
+        return ResponseVO.success(img_pre, filmIndexVO);
     }
 
 
