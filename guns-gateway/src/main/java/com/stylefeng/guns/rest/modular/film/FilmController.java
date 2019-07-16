@@ -36,9 +36,6 @@ public class FilmController {
 //        filmIndexVO.setTop100(filmServiceApi.getTop());
 
         return ResponseVO.success(filmIndexVO);
-
-        return null;
-
     }
 
 
