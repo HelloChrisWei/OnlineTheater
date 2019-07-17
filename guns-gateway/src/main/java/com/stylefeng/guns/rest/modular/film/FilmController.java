@@ -1,7 +1,6 @@
 package com.stylefeng.guns.rest.modular.film;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.stylefeng.guns.rest.modular.film.VO.ConditionListResult;
 import com.stylefeng.guns.rest.modular.film.VO.FilmIndexVO;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
 import org.springframework.stereotype.Controller;
@@ -32,9 +31,9 @@ public class FilmController {
         // 获取banner信息
         filmIndexVO.setBanners(filmServiceApi.getBanners());
         // 获取正在热映的电影
-        filmIndexVO.setHotFilms(filmServiceApi.getHotFilms());
+        filmIndexVO.setHotFilms(filmServiceApi.getHotFilms(false, 99));
         // 即将上映的电影
-        filmIndexVO.setSoonFilms(filmServiceApi.getSoonFilms());
+        filmIndexVO.setSoonFilms(filmServiceApi.getSoonFilms(false, 99));
         // 票房排行榜
         filmIndexVO.setBoxRanking(filmServiceApi.getBoxRanking());
         // 获取受欢迎的榜单
@@ -47,17 +46,5 @@ public class FilmController {
 
 
 
-    @RequestMapping("getConditionList")
-    public ConditionListResult getConditionList(int catId, int sourceId, int yearId) {
 
-
-//        @Reference
-//        FilmService filmService;
-//
-//        service.getcatInfoByCatId
-
-
-
-        return null;
-    }
 }
