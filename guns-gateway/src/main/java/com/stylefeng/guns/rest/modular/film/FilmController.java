@@ -23,6 +23,7 @@ public class FilmController {
 
 
 
+    // 获取首页信息接口
     @RequestMapping(value = "/getIndex", method = RequestMethod.GET)
     public ResponseVO<FilmIndexVO> getIndex() {
 

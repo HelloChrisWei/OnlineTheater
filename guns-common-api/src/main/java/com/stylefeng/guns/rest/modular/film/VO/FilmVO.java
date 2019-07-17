@@ -2,6 +2,7 @@ package com.stylefeng.guns.rest.modular.film.VO;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  * @author Wei
  */
 @Data
-public class FilmVO {
+public class FilmVO implements Serializable {
 
     private int filmNum;
 
