@@ -11,7 +11,7 @@ import java.util.List;
  * @author Wei
  */
 @Data
-public class FilmIndexVO implements Serializable {
+public class FilmIndexVO {
 
     private List<BannerVO> banners;
     private FilmVO hotFilms;

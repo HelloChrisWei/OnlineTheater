@@ -60,7 +60,7 @@ public class DefaultFilmServiceImpl implements FilmServiceApi{
     }
 
     @Override
-    public FilmVO getHotFilms() {
+    public FilmVO getHotFilms(boolean isLimit, int nums) {
         FilmVO result = new FilmVO();
         List<MtimeFilmT> mtimeFilms = mtimeFilmTMapper.selectList(null);
 
@@ -74,7 +74,7 @@ public class DefaultFilmServiceImpl implements FilmServiceApi{
     }
 
     @Override
-    public FilmVO getSoonFilms() {
+    public FilmVO getSoonFilms(boolean isLimit, int nums) {
         FilmVO result = new FilmVO();
 
 
