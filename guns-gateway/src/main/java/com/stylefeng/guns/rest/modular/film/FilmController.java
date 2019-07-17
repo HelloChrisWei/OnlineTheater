@@ -31,9 +31,9 @@ public class FilmController {
         // 获取banner信息
         filmIndexVO.setBanners(filmServiceApi.getBanners());
         // 获取正在热映的电影
-        filmIndexVO.setHotFilms(filmServiceApi.getHotFilms(false, 99));
+        filmIndexVO.setHotFilms(filmServiceApi.getHotFilms(true, 10));
         // 即将上映的电影
-        filmIndexVO.setSoonFilms(filmServiceApi.getSoonFilms(false, 99));
+        filmIndexVO.setSoonFilms(filmServiceApi.getSoonFilms(true, 10));
         // 票房排行榜
         filmIndexVO.setBoxRanking(filmServiceApi.getBoxRanking());
         // 获取受欢迎的榜单
