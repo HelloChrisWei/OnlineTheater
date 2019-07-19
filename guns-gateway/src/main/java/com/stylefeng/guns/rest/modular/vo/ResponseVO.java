@@ -1,4 +1,9 @@
 package com.stylefeng.guns.rest.modular.vo;
+
+import com.stylefeng.guns.rest.modular.cinema.vo.CinemaVO;
+
+import java.util.List;
+
 /**
  * 
  * @version 1.0 2019/7/16
@@ -68,7 +73,7 @@ public class ResponseVO<M> {
 
     private ResponseVO(){}
 
-    public static<M> ResponseVO success(int nowPage,int totalPage,String imgPre,M m){
+    public static<M> ResponseVO success(int nowPage, int totalPage, String imgPre, List<CinemaVO> m){
         ResponseVO responseVO = new ResponseVO();
         responseVO.setStatus(0);
         responseVO.setData(m);
