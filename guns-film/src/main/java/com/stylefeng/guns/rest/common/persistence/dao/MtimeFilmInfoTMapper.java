@@ -2,6 +2,8 @@ package com.stylefeng.guns.rest.common.persistence.dao;
 
 import com.stylefeng.guns.rest.common.persistence.model.MtimeFilmInfoT;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +13,7 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  * @author cskaoyan
  * @since 2019-07-16
  */
+@Repository
 public interface MtimeFilmInfoTMapper extends BaseMapper<MtimeFilmInfoT> {
 
 }

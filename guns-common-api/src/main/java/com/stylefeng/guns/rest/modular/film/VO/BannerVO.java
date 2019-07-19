@@ -2,6 +2,8 @@ package com.stylefeng.guns.rest.modular.film.VO;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 /**
  * 
@@ -9,7 +11,7 @@ import lombok.Data;
  * @author Wei
  */
 @Data
-public class BannerVO {
+public class BannerVO implements Serializable {
 
     private String bannerId;
     private String bannerAddress;
